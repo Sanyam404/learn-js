@@ -1,30 +1,39 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>DOM Manipulation Example</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO-DO LIST</title>
     <style>
-        .task-item {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 10px;
+        body {
+          text-align: center;
+          font-size: xx-large;
+          background-color: wheat;
+        }
+       .task-item {
+          margin-bottom: 20px;
+          display: flex;
+          justify-content: space-between;
+        }
+       .task-name {
+          font-size: 18px;
+        }
+       .button-container {
+          white-space: nowrap;
+          margin-right: 10px;
         }
         .edit-button, .delete-button {
-            margin-left: 10px;
+          margin-right: 10px;
         }
-    </style>
+      </style>
 </head>
 <body>
-    <h1>To-Do List</h1>
-    <input type="text" id="task-input" placeholder="Enter a new task">
-    <button id="add-button" class="add-button">Add Task</button>
-    <ul id="task-list">
-        <li class="task-item">Sample Task 1
-            <button class="edit-button">Edit</button>
-            <button class="delete-button">Delete</button></li>
-        <li class="task-item">Sample Task 2
-            <button class="edit-button">Edit</button>
-            <button class="delete-button">Delete</button></li>
-    </ul>
-    <script src="script.js"></script>
+  <h1>To-Do List</h1>
+  <input type="text" id="task-input" placeholder="Enter a new task">
+  <button id="add-button">Add Task</button>
+  <ul id="task-list">
+    <!-- tasks will be added here -->
+  </ul>
+  <script src="script.js"></script>
 </body>
 </html>

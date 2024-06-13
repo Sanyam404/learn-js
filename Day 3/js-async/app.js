@@ -103,8 +103,8 @@ function fetchDataWithCallback(callback) {
     Promise.all([promise1, promise2])
       .then(values => {
         const [posts, users] = values;
-        const postTitles = posts.slice(0, 3).map(post => `<li>Post: ${post.title}</li>`).join('');
-        const userNames = users.slice(0, 3).map(user => `<li>User: ${user.name}</li>`).join('');
+        const postTitles = posts.slice(0, 3).map(post => <li>Post: ${post.title}</li>).join('');
+        const userNames = users.slice(0, 3).map(user => <li>User: ${user.name}</li>).join('');
         output.innerHTML = postTitles + userNames;
       })
       .catch(error => {
@@ -127,4 +127,3 @@ function fetchDataWithCallback(callback) {
         console.error('Error:', error);
       });
   }
-  
